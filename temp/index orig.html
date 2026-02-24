@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dalzell Data Consulting | Reporting Automation</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Your CSS -->
+<link rel="stylesheet" href="css/cardflip.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- AOS Animation -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f7fa;
+}
+
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.section-light { background:white; }
+.section-accent { background:#1a73e8; color:white; }
+
+.container {
+  max-width:1100px;
+  margin:auto;
+}
+
+/* INFOGRAPHIC */
+.infographic-container {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.infographic-slice {
+  position:relative;
+  width:220px;
+  height:220px;
+  overflow:hidden;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.infographic-slice img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.3s;
+}
+
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(26,115,232,0.85);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:15px;
+  opacity:0;
+  transition:opacity 0.3s;
+}
+
+/* REVIEWS */
+.reviews {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="section section-light hero">
+  <div class="container" data-aos="fade-up">
+    <h1>Data Research Excellence: Ferreting Out The Truth in Numbers</h1>
+    <p>Helping businesses transform financial reporting, automation, and data systems.</p>
+
+    <a href="#contact" class="cta-button">Book Your Free Consultation</a>
+  </div>
+</section>
+</section>
+
+<header class="header">
+  <div class="container nav">
+    <div class="logo"><img src="images/mylogo_small2.jpg" width="251" height="235"></div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#framework">Framework</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#contact" class="cta-nav">Book Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- INFOGRAPHIC -->
+<section class="section section-accent">
+  <div class="container">
+    <h2 data-aos="fade-down">Operational Excellence Framework</h2>
+    <p data-aos="fade-down">Hover each section to learn more</p>
+
+    <div class="infographic-container">
+
+      <div class="infographic-slice" data-aos="fade-up">
+        <img src="images/InfoGraphic-slice1.png">
+        <div class="overlay">Data Integrity & Reporting</div>
+      </div>
+
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/InfoGraphic-slice2.png">
+        <div class="overlay">Process Automation</div>
+      </div>
+
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/InfoGraphic-slice3.png">
+        <div class="overlay">Technical Writing</div>
+      </div>
+
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/InfoGraphic-slice4.png">
+        <div class="overlay">Corporate Training</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="case-study" class="section section-light">
+  <div class="container" data-aos="fade-up">
+
+    <h2>Case Study: Automated Financial Reporting System</h2>
+    <p>How a small business gained full visibility into their financials.</p>
+
+    <div class="case-grid">
+
+      <div class="case-box">
+        <h3>Problem</h3>
+        <p>Manual reporting processes caused delays, errors, and lack of visibility into financial performance.</p>
+      </div>
+
+      <div class="case-box">
+        <h3>Solution</h3>
+        <p>Implemented automated reporting using SQL, Excel, and Power BI, integrating multiple data sources.</p>
+      </div>
+
+      <div class="case-box">
+        <h3>Result</h3>
+        <p>Reduced reporting time by over 80% and delivered accurate, real-time financial insights.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section-light">
+  <div class="container">
+    <h2 data-aos="fade-up">Client Reviews</h2>
+    <p data-aos="fade-up">Hover to see feedback</p>
+
+    <div class="reviews">
+
+      <!-- KEEPING YOUR ORIGINAL FLIP CARDS -->
+      <div class="flip-card" data-aos="zoom-in">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/avatarm1.JPG" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <p>★★★★★</p>
+			<br>
+           <p>Exceptional data migration and automation. Highly professional.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/avatarm1.JPG" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <p>★★★★★</p>
+            <p>Amazing interaction and support. Best Fiverr experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/avatarm1.JPG" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <p>★★★★★</p>
+            <p>Highly recommended for database and reporting work.</p>
+          </div>
+		 </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-accent">
+  <div class="container" data-aos="fade-up">
+    <h2>Get In Touch</h2>
+    <p>Let’s automate your reporting</p>
+
+    <form>
+      <input type="text" placeholder="Name" required><br><br>
+      <input type="email" placeholder="Email" required><br><br>
+      <button type="submit">Contact Me</button>
+    </form>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration:800,
+  once:true
+});
+
+/* HOVER EFFECT */
+document.querySelectorAll('.infographic-slice').forEach(slice=>{
+  slice.addEventListener('mouseenter',()=>{
+    slice.querySelector('img').style.transform='scale(1.1)';
+    slice.querySelector('.overlay').style.opacity='1';
+  });
+  slice.addEventListener('mouseleave',()=>{
+    slice.querySelector('img').style.transform='scale(1)';
+    slice.querySelector('.overlay').style.opacity='0';
+  });
+});
+</script>
+
+</body>
+</html>
