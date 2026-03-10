@@ -3,7 +3,7 @@
 /**
  * Vimeo
  *
- * with help of the API this class delivers all kind of Images/Videos from Vimeo
+ * with help of the API this class delivers all kind of img/Videos from Vimeo
  *
  * @package    socialstreams
  * @subpackage socialstreams/vimeo
