@@ -1,337 +1,274 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<h1>Site Deployment Test</h1>
-<p>If you see this, HTML is loading correctly.</p>
-<meta charset="utf-8">
-<title>Dalzell Data Consulting</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
-<link href="css/style.css" rel="stylesheet">
-<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-<link rel="icon" href="img/favicon.png" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="css/responsive.css" rel="stylesheet">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Dazell | Consulting Services</title>
+
+<!-- Your CSS -->
+<link rel="stylesheet" href="css/cardflip.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- AOS Animation -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+<style>
+/* === Basic Styles === */
+body {margin:0;font-family:Arial,sans-serif;line-height:1.6;color:#333;}
+h1,h2,h3 {margin-bottom:0.5em;}
+a {color:#1a73e8;text-decoration:none;}
+img {max-width:100%;height:auto;display:block;}
+.section {padding:80px 20px;}
+.section-light {background:#ffffff;}
+.section-soft {background:#f6f8fa;}
+.section-accent {background:linear-gradient(135deg,#e6f0f3,#ffffff);}
+.section-dark {background:#2f4f5b;color:white;}
+
+.container {max-width:1100px;margin:0 auto;}
+
+.header {text-align:center;margin-bottom:40px;}
+
+/* INFOGRAPHIC */
+.infographic-container {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.infographic-slice {
+  position:relative;
+  width:220px;
+  height:220px;
+  overflow:hidden;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+.infographic-slice img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.3s;
+}
+
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(26,115,232,0.85);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:15px;
+  opacity:0;
+  transition:opacity 0.3s;
+}
+
+/* REVIEWS */
+.review-card {background:#fff;padding:20px;margin:20px 0;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+.review-container {display:flex;flex-direction:column;align-items:center;max-width:800px;margin:0 auto;}
+
+/* Contact */
+.contact-form {max-width:600px;margin:0 auto;}
+.contact-form input, .contact-form textarea {width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;}
+.contact-form input[type="submit"] {background:#1a73e8;color:#fff;border:none;cursor:pointer;transition:0.3s;}
+.contact-form input[type="submit"]:hover {background:#155ab6;}
+
+.style7 {color: #006600}
+</style>
 </head>
-
-
-
 <body>
 
-<div class="page-wrapper">
-    
-    <!-- Preloader -->
-    <div class="preloader"></div>
-    
-    <!--Header Span-->
-    <div class="header-span"></div>
-    
-    <!-- Main Header-->
-    <header class="main-header">
-        
-        <!-- Main Box (top corner logo) -->
-        <div class="main-box">
-            <div class="outer-container clearfix">
-                <!--Logo Box-->
-             <div class="logo-box">
-                    <div class="logo"> <br>
-                        <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img style="width: 125px; height: 117px;"<img src="img/mylogo_small2.jpg" alt=""></a></div>
-                
-                </div>
-               
-                <!--Nav Outer-->
-                <div class="nav-outer clearfix">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->      
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="service.html">Services</a></li>
-                                <li><a href="portfolio.html">Portfolio</a>   </li>
-                                     <li><a href="about.html">About</a></li>
-                                  <li><a href="Contacts">Contact</a></li>
-                             </ul>
-                        </div>
-                    </nav>
-                    <!-- Main Menu End-->
+<!-- Hero Section -->
+<section class="section section-light" data-aos="fade-up">
+  <div class="container header">
+   <div class="logo style7"><img src="images/mylogo_small2.jpg" width="173" height="169" align="middle"><span class="container nav">
+     <nav>
+       <div align="right"><a href="#services">Services</a> | <a href="#framework">Framework</a> | <a href="#reviews">Reviews</a> | <a href="#case-study">Case Study</a> | <a href="#contacts" class="cta-nav">Book Consultation</a> </div>
+     </nav>
+   </span></div>
+    <h1>Jennifer Dazell | Business & Financial Consulting</h1>
+    <p>Helping businesses transform financial reporting, automation, and data systems.</p>
+  </div>
+</section>
 
-                </div>
-                <!--Nav Outer End-->
 
-                <!--Btn Outer-->
-                <div class="btn-outer">
-                    <!--Search Box-->
-                    <div class="search-box-outer">
-                        <div class="dropdown">
-                            <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-                            <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-                                <li class="panel-outer">
-                                    <div class="form-container">
-                                        <form method="post" action="#">
-                                            <div class="form-group">
-                                                <input type="search" name="field-name" value="" placeholder="Search Here" required>
-                                                <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Hidden Nav Toggler -->
-                    <div class="nav-toggler">
-                        <button class="hidden-bar-opener"><span class="image"><img src="img/icons/menu-bar.png" alt=""></span></button>
-                    </div>
-                    <!-- / Hidden Nav Toggler -->
-                </div>
-                
-            </div>
-        </div>
-    
-    </header>
-    <!--End Main Header -->
+<!-- INFOGRAPHIC -->
+<section class="section section-accent" section id="framework">
+  <div class="container">
+    <h2 class="style7" data-aos="fade-down">Operational Excellence Framework</h2>
+ <!--    <p class="style7" data-aos="fade-down">Hover each section to learn more</p> -->
 
-    
-    <!-- Hidden Navigation Bar -->
-    <section class="hidden-bar right-align">
-        
-        <div class="hidden-bar-closer">
-            <button><span class="flaticon-remove"></span></button>
-        </div>
-        
-        <!-- Hidden Bar Wrapper -->
-        <div class="hidden-bar-wrapper">
-             <br><br><br><br>
-            <div class="logo">
-                <a href="index.html"><img src="img/MyLogo_small2.JPG" alt="" /></a>
-              
-            </div>
-            <div class="content-box">
-                <h2>About Me</h2>
-				<div class="text">Ready to streamline your reporting and automate  your processes? Schedule a free consultation to see how I can help!</div>
-                <a href="mailto:jennifer.dalzell22@gmail.com" class="theme-btn btn-style-four">Book Your Free Consultation</a></div>
-                
-                
-            </div>
-            <div class="contact-info">
-                <h2>Contact Info</h2>
-                <ul class="list-style-two">
-                    <li><span class="icon fa fa-map-marker"></span>White Plains, NY, USA</li>
-<!--                    <li><span class="icon fa fa-phone"></span>(526) 236-895-4732</li>-->
-                    <!--<li><span class="icon fa fa-envelope-o"></span>Malone@gmail.com</li>-->
-<!--                    <li><span class="icon fa fa-clock-o"></span>Week Days: 09.00 to 18.00 Sunday: Closed </li>-->
-                </ul>
-            </div>
-        </div><!-- / Hidden Bar Wrapper -->
-        
-    </section>
-    <!-- End / Hidden Bar -->
+    <div class="infographic-container">
 
-    <!--Main Slider-->
-    <section class="main-slider">
-        
-        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
-            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
-                <ul>
-                      
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="150" data-fsslotamount="2" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="img/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-                   <br><br><br><br><br><br><br>  <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="img/main-slider/image-1.jpg"> 
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['1100','1000','900','600']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-110','-100','-90','-90']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":0,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: wrap;">
-<!--                        <div class="light"><h1>Hello! </h1></div>-->
-                        <br><br><br><br><br>
-                    </div>
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[70,400,80,80]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['750','750','750','750']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['30','30','30','30']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":0,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: wrap;">
-<!--
-                        <div class="">
-                            <div class="text">I can be your all-in-one tech solution. I am an experienced data analyst and business systems specialist.  I'm a master in problem-solving, creativity, and simplified, automated solutions for computer building, upgrades, and software problems.  I specialize in helping small to medium-sized businesses, allowing you to concentrate on your core competencies while I help yours grow.</div> 
-                        </div>
--->
-                        <br><br><br><br>
-                    </div>
+      <div class="infographic-slice" data-aos="fade-up">
+        <img src="images/InfoGraphic-slice1.png">
+        <div class="overlay">Data Integrity & Reporting</div>
+      </div>
 
-<!--
-                    <div class="tp-caption tp-resizeme" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['600','600','400','290']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['120','120','130','130']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":15,"to":"o:1;","delay":15,"ease":"Power3.easeInOut"},{"delay":"wait","speed":75,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: nowrap;">
-                   <br><br><br><br>     <a href="portfolio.html" class="theme-btn btn-style-three">Portfolio</a>
-                    </div>
--->
-                    
-                    </li>
-                    
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="img/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
-          
-		  <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="img/main-slider/image-4.jpg">  
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['1100','1000','900','600']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-110','-100','-90','-90']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":500,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: nowrap;">
-<!--                        <div class="light"><h1>Hello! <br></h1></div>-->
-                    </div>
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['600','600','550','500']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['30','30','30','30']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":500,"to":"o:1;","delay":500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: nowrap;">
-                        <div class="">
-<!--                            <div class="text">Tech Mastery Redefined: Your Comprehensive Tech Solution for Seamless Success!</div>-->
-                        </div>
-                    </div>
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/InfoGraphic-slice2.png">
+        <div class="overlay">Process Automation</div>
+      </div>
 
-<!--
-                    <div class="tp-caption tp-resizeme" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['600','600','400','290']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['120','120','130','130']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                    style="z-index: 7; white-space: nowrap;">
-                        <a href="portfolio.html" class="theme-btn btn-style-three">Portfolio</a>
-                    </div>
--->
-                    
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <!--Scroll Dwwn Btn
-        <div class="mouse-btn-down scroll-to-target" data-target="#features">Scroll Down</div>   -->
-    </section>
-    <!--End Main Slider--> 
-  
-    
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/InfoGraphic-slice3.png">
+        <div class="overlay">Technical Writing</div>
+      </div>
 
-   
+      <div class="infographic-slice" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/InfoGraphic-slice4.png">
+        <div class="overlay">Corporate Training</div>
+      </div>
 
-<script src="js/jquery.js"></script> 
+    </div>
+  </div>
+</section>
 
-<!--Revolution Slider-->
-<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="js/main-slider-script.js"></script>
+<!-- CASE STUDY -->
+<a href="#case-study">
+<section id="case-study" class="section section-light">
+</section>
+</a>
+<section id="case-study" class="section section-light"><div class="container" data-aos="fade-up">
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/script.js"></script>
+    <h2><a href="#case-study">Case Study: Automated Financial Reporting System</a></h2>
+    <p><a href="#case-study">How a small business gained full visibility into their financials.</a></p>
+
+    <div class="case-grid">
+
+      <div class="case-box">
+        <h3><a href="#case-study">Problem</a></h3>
+        <p><a href="#case-study">Manual reporting processes caused delays, errors, and lack of visibility into financial performance.</a></p>
+      </div>
+
+      <div class="case-box">
+        <h3><a href="#case-study">Solution</a></h3>
+        <p><a href="#case-study">Implemented automated reporting using SQL, Excel, and Power BI, integrating multiple data sources.</a></p>
+      </div>
+
+      <div class="case-box">
+        <h3><a href="#case-study">Result</a></h3>
+        <p><a href="#case-study">Reduced reporting time by over 80% and delivered accurate, real-time financial insights.</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Services -->
+<a href="#services">
+<section class="section section-soft" section id="services" data-aos="fade-right">
+</section>
+</a>
+<section class="section section-soft" section id="services" data-aos="fade-right"><div class="container">
+    <h2><a href="#services">What I Do</a></h2>
+    <p><a href="#services">Providing expert consulting, system automation, and actionable insights for small businesses.</a></p>
+    <ul>
+      <li><a href="#services">Data integrity & reporting</a></li>
+      <li><a href="#services">Process automation & workflow optimization</a></li>
+      <li><a href="#services">Technical writing & documentation</a></li>
+      <li><a href="#services">Corporate training & coaching</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Case Studies / Systems -->
+<section class="section section-light" data-aos="fade-left">
+  <div class="container">
+    <h2>Systems & Software Expertise</h2>
+    <p>QuickBooks, Access, SQL Server, Oracle EBS, MS Dynamics/Great Plains, SharePoint, Hyperion, and more.</p>
+  </div>
+</section>
+
+<!-- Fiverr Reviews -->
+<a href="#reviews">
+<section class="section section-soft" section id="reviews" data-aos="fade-up">
+</section>
+</a>
+<section class="section section-soft" section id="reviews" data-aos="fade-up"><div class="container header">
+    <h2><a href="#reviews">Client Feedback</a></h2>
+    <div class="review-container">
+      <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+	   <p><a href="#reviews">★★★★★</a></p>
+        <p><a href="#reviews">"Jennifer is amazing! She transformed our reporting processes completely."</a></p>
+        <a href="#reviews"><span>- Fiverr</span>
+        </a></div>
+      <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+	   <p><a href="#reviews">★★★★★</a></p>
+        <p><a href="#reviews">"Highly recommend her services. Clear, concise, and efficient."</a></p>
+        <a href="#reviews"><span>- Fiverr</span>
+        </a></div>
+      <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+	   <p><a href="#reviews">★★★★★</a></p>
+        <p><a href="#reviews">"The automation solutions saved our team hours every week."</a></p>
+        <a href="#reviews"><span>- Fiverr</span>
+        </a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<a href="#contact">
+<section class="section section-dark" section id="contacts" data-aos="fade-up">
+</section>
+</a>
+<section class="section section-dark" data-aos="fade-up"><div class="container header">
+    <h2><a href="#contact">Contact Me</a></h2>
+    <p><a href="#contact"><strong>Need better financial visibility or automation?</strong><br>
+Tell me a little about your business — I’ll respond with next steps.</a></p>
+    <div class="contact-form">
+  <form action="https://formsubmit.co/hello@dalzelldataconsulting.com" method="POST">
+    <a href="#contact">
+  <input type="text" name="name" placeholder="* Name" required>
+  <input type="email" name="email" placeholder="* Email" required>
+  <input type="text" name="subject" placeholder="Subject">
+		<select name="project_type" required>
+		        <option value="">Select what you need help with</option>
+		        <option>Financial Reporting</option>
+		        <option>Automation</option>
+		        <option>Database / SQL</option>
+		        <option>Training</option>
+        </select>
+        <textarea name="message" rows="6" placeholder="* Message" required></textarea>
+
+        <!-- Hidden settings -->
+        <input type="hidden" name="_next" value="https://dalzelldataconsulting.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="submit" value="Send">
+    </a>
+  </form>
+      <a href="#contact">
+      </form>
+	  
+	  </a>
+      <p style="font-size:1.25em;opacity:0.8;"><a href="#contact">
+  I typically respond within 24 hours. Your information is kept private.
+      </a></p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<section class="section section-light" data-aos="fade-up">
+  <div class="container header">
+    <p>© 2026 Jennifer Dazell | Consulting Services <a href="#"></a></p>
+  </div>
+</section>
+
+<!-- AOS Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({duration:800,once:true,easing:'ease-in-out'});
+</script>
 </body>
-
 </html>
-
