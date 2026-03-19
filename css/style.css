@@ -47,8 +47,9 @@ h2 {
 }
 
 p {
-  margin-bottom: 15px;
-  font-size: 16px;
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #009;
 }
 
 /* BUTTON */
